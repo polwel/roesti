@@ -44,7 +44,7 @@ rost::rost! {
     }
 
     asynchron funktion beispiel2() {
-        beispiel().erwarte;
+        beispiel().abwarten;
     }
 
     funktion einstieg() {

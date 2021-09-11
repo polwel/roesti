@@ -18,7 +18,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "ausgabe" => "println",
         "abbruch" => "break",
         "asynchron" => "async",
-        "erwarte" => "await",
+        "abwarten" => "await",
         "schleife" => "loop",
         "schiebe" => "move",
         "kiste" => "crate",
