@@ -1,4 +1,4 @@
-name: Rust
+name: "Kontinuierliche Integration"
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 
 jobs:
   ci:
-    name: "Kontinuierliche Integration"
     runs-on: ubuntu-latest
     env:
         RUST_BACKTRACE: 1
