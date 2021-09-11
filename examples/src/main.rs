@@ -1,7 +1,7 @@
 rost::rost! {
     benutze std::collections::Wörterbuch als Wöbu;
 
-    vereinbarung SchlüsselWert {
+    eigenschaft SchlüsselWert {
         funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette);
         funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette>;
     }
