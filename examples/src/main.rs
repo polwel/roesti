@@ -1,85 +1,76 @@
-rouille::rouille! {
-    externe cagette rouille;
+rost::rost! {
+    benutze std::collections::Wörterbuch als Wöbu;
 
-    utilisons std::collections::Dictionnaire comme Dico;
-
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine);
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine>;
+    vereinbarung SchlüsselWert {
+        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette);
+        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette>;
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaine, Chaine>> = Rien;
+    statisch änd WÖRTERBUCH: Möglichkeit<Wöbu<Zeichenkette, Zeichenkette>> = Nichts;
 
-    structure Concrète;
+    struktur Konkret;
 
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
+    umstz SchlüsselWert für Konkret {
+
+        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette) {
+            lass wöbu = gefährlich {
+                WÖRTERBUCH.hole_oder_füge_ein_mit(Standard::standard)
             };
-            dico.insérer(clé, valeur);
+            wöbu.einfügen(schlsl, wert);
         }
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+
+        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette> {
+            wenn lass Etwas(wöbu) = gefährlich { WÖRTERBUCH.als_ref() } {
+                Gut(wöbu.hole(&schlsl))
+            } anderenfalls {
+                Fehler("Holt das Wörterbuch".hinein())
             }
         }
     }
 
-    public(cagette) fonction peut_etre(i: u32) -> PeutÊtre<Résultat<u32, Chaine>> {
-        si i % 2 == 1 {
-            si i == 42 {
-                Quelque(Arf(Chaine::depuis("merde")))
-            } sinon {
-                Quelque(Bien(33))
+    öffentlich(kiste) funktion vielleicht(i: u32) -> Möglichkeit<Ergebnis<u32, Zeichenkette>> {
+        wenn i % 2 == 1 {
+            wenn i == 42 {
+                Etwas(Fehler(Zeichenkette::von("Scheiße")))
+            } anderenfalls {
+                Etwas(Gut(33))
             }
-        } sinon {
-            Rien
+        } anderenfalls {
+            Nichts
         }
     }
 
-    asynchrone fonction exemple() {
+    asynchron funktion beispiel() {
     }
 
-    asynchrone fonction exemple2() {
-        exemple().attend;
+    asynchron funktion beispiel2() {
+        beispiel().erwarte;
     }
 
-    fonction principale() {
-        soit mutable x = 31;
+    funktion einstieg() {
+        lass änd x = 31;
 
-        selon x {
+        entspreche x {
             42 => {
-                affiche!("omelette du fromage")
+                ausgabe!("Wienerschnitzel")
             }
-            _ => affiche!("voila")
+            _ => ausgabe!("Na geht doch")
         }
 
-        pour i de 0..10 {
-            soit val = boucle {
-                arrête i;
+        für i in 0..10 {
+            lass val = schleife {
+                abbruch i;
             };
 
-            tant que x < val {
+            während keins x < val {
                 x += 1;
             }
 
-            x = si soit Quelque(resultat) = peut_etre(i) {
-                resultat.déballer()
-            } sinon {
+            x = wenn lass Etwas(ergebnis) = vielleicht(i) {
+                ergebnis.entpacken()
+            } anderenfalls {
                 12
             };
         }
-
-        secondaire();
-    }
-
-    #[légal(code_inaccessible)]
-    fonction secondaire() {
-        merde!("oh non"); // for the true French experience
-        calisse!("tabernacle"); // for friends speaking fr-ca
-        oups!("fetchez la vache"); // in SFW contexts
     }
 }
