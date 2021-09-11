@@ -23,7 +23,7 @@ Here's an example of what can be achieved with Rost:
 rost::rost! {
     benutze std::collections::Wörterbuch als Wöbu;
 
-    vereinbarung SchlüsselWert {
+    eigenschaft SchlüsselWert {
         funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette);
         funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette>;
     }
@@ -59,7 +59,7 @@ syntax. Gut so!
 
 ## but why would you do dis?
 
-* the [french](https://github.com/bnjbvr/rouille) and [dutch](https://github.com/jeroenhd/roest) can do it, so we can as well!
+* the [French](https://github.com/bnjbvr/rouille) and [Dutch](https://github.com/jeroenhd/roest) can do it, so we can as well!
 
 ## Mitwirken
 

@@ -25,7 +25,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "unerreichbarer_code" => "unreachable_code",
         "als" => "as",
         "konstante" => "const",
-        "vereinbarung" => "trait",
+        "eigenschaft" => "trait",
         "gefährlich" => "unsafe",
         "in" => "in",
         "von" => "from",
