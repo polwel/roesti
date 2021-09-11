@@ -21,29 +21,31 @@ Here's an example of what can be achieved with Rost:
 
 ```rust
 rost::rost! {
-    utilisons std::collections::Dictionnaire comme Dico;
+    benutze std::collections::Wörterbuch als Wöbu;
 
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine);
-        fonction lire(&soi, clé: Chaine) -> PeutÊtre<&Chaine>;
+    vereinbarung SchlüsselWert {
+        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette);
+        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette>;
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaine, Chaine>> = Rien;
+    statisch änd WÖRTERBUCH: Möglichkeit<Wöbu<Zeichenkette, Zeichenkette>> = Nichts;
 
-    structure Concrète;
+    struktur Konkret;
 
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
+    umstz SchlüsselWert für Konkret {
+
+        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette) {
+            lass wöbu = gefährlich {
+                WÖRTERBUCH.hole_oder_füge_ein_mit(Standard::standard)
             };
-            dico.insérer(clé, valeur);
+            wöbu.einfügen(schlsl, wert);
         }
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+
+        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette> {
+            wenn lass Etwas(wöbu) = gefährlich { WÖRTERBUCH.als_ref() } {
+                Gut(wöbu.hole(&schlsl))
+            } anderenfalls {
+                Fehler("Holt das Wörterbuch".hinein())
             }
         }
     }
