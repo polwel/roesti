@@ -59,7 +59,7 @@ syntax. Gut so!
 
 ## but why would you do dis?
 
-* the [frech](https://github.com/bnjbvr/rouille) and [dutch](https://github.com/jeroenhd/roest) can do it, so we can as well!
+* the [french](https://github.com/bnjbvr/rouille) and [dutch](https://github.com/jeroenhd/roest) can do it, so we can as well!
 
 ## Mitwirken
 
