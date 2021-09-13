@@ -15,6 +15,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "Nichts" => "None",
         "Ergebnis" => "Result",
         "Selbst" => "Self",
+        "sammlungen" => "collections",
         "ausgabe" => "println",
         "abbruch" => "break",
         "asynchron" => "async",
