@@ -45,7 +45,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "modul" => "mod",
         "änd" => "mut",
         "neu" => "new",
-        "who" => "where",
+        "wo" => "where",
         "für" => "for",
         "hole_oder_füge_ein_mit" => "get_or_insert_with",
         "einstieg" => "main",
