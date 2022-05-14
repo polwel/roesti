@@ -57,7 +57,7 @@ rost::rost! {
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
 syntax. Gut so!
 
-## but why would you do dis?
+## but why would you do das?
 
 * the [French](https://github.com/bnjbvr/rouille) and [Dutch](https://github.com/jeroenhd/roest) can do it, so we can as well!
 
