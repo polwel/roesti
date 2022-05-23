@@ -21,7 +21,7 @@ Here's an example of what can be achieved with Rost:
 
 ```rust
 rost::rost! {
-    benutze std::collections::Wörterbuch als Wöbu;
+    benutze std::sammlungen::Wörterbuch als Wöbu;
 
     eigenschaft SchlüsselWert {
         funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette);
