@@ -70,7 +70,7 @@ here and there, and open a pull-request against the `hauptzweig` (German for
 
 ## Die Lizenzbestimmungen
 
-[WTFPL](http://www.wtfpl.net/).
+[WTFPL](http://www.wtfpl.net/). The images do not fall under this license, see below.
 
 Image attributions:
 * "Brezel und Filzhut zum Oktoberfest" by Tim Reckmann | a59.de is licensed under CC BY 2.0
