@@ -23,6 +23,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "schleife" => "loop",
         "schiebe" => "move",
         "kiste" => "crate",
+        "Schachtel" => "Box",
         "unerreichbarer_code" => "unreachable_code",
         "als" => "as",
         "konstante" => "const",
