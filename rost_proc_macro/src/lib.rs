@@ -44,15 +44,23 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "einfügen" => "insert",
 
         // iterator funktionen
+        "wieder" => "iter",
+        "zu_wieder" => "into_iter",
         "zuordnen" => "map",
         "ausbreiten" => "flat_map",
+        "falte" => "fold",
         "leeren" => "drain",
         "sammeln" => "collect",
         "finde" => "find",
         "nehme" => "take", 
         "produkt" => "product",
 
+        // ordering
         "vgl" => "cmp",
+        "Ordnung" => "Ordering",
+        "Mehr" => "Greater",
+        "Weniger" => "Less",
+        "Gleich" => "Equal",
         "hole" => "get",
         "erlaube" => "allow",
         "panik" | "scheiße" | "mist" | "ups" => "panic",

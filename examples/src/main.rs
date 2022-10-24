@@ -72,5 +72,18 @@ rost::rost! {
                 12
             };
         }
+
+        benutze std::vgl::Ordnung;
+        let _mod7 = vec![0; 100].wieder()
+            .nehme(50)
+            .zuordnen(|nummer| nummer %  7)
+            .sammeln::<Vec<i32>>()
+            .zu_wieder()
+            .falte(0, |a, nummer| match nummer.vgl(&a) {
+                Ordnung::Mehr => a - nummer,
+                Ordnung::Weniger => a + nummer,
+                Ordnung::Gleich => a,
+            });
     }
 }
+
