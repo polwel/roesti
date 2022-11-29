@@ -11,7 +11,7 @@ programs?
 write Rust programs in German, using German keywords, German function names,
 German idioms.
 
-You're don't feel at ease using only German words? Don't worry!
+You don't feel at ease using only German words? Don't worry!
 German Rust is fully compatible with English-Rust, so you can mix both at your
 convenience.
 
