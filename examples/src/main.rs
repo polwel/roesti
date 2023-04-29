@@ -1,89 +1,88 @@
-rost::rost! {
-    benutze std::sammlungen::Wörterbuch als Wöbu;
+roesti::roesti! {
+    benutze std::sammlige::Wörterbuech als Wöbu;
 
-    eigenschaft SchlüsselWert {
-        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette);
-        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette>;
+    eigedschaft SchlüsselWärt {
+        funktion schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette);
+        funktion läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette>;
     }
 
-    statisch änd WÖRTERBUCH: Möglichkeit<Wöbu<Zeichenkette, Zeichenkette>> = Nichts;
+    statisch änd WÖRTERBUECH: Mängisch<Wöbu<Zeichäkette, Zeichäkette>> = Nüüt;
 
     struktur Konkret;
 
-    umstz SchlüsselWert für Konkret {
+    impl SchlüsselWärt für Konkret {
 
-        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette) {
-            lass wöbu = gefährlich {
-                WÖRTERBUCH.hole_oder_füge_ein_mit(Standard::standard)
+        funktion schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette) {
+            sei wöbu = gföhrlich {
+                WÖRTERBUECH.hol_oder_füeg_ii_mit(Standard::standard)
             };
-            wöbu.einfügen(schlsl, wert);
+            wöbu.iifüge(schlsl, wärt);
         }
 
-        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette> {
-            wenn lass Etwas(wöbu) = gefährlich { WÖRTERBUCH.als_ref() } {
-                Gut(wöbu.hole(&schlsl))
-            } anderenfalls {
-                Fehler("Holt das Wörterbuch".hinein())
+        funktion läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette> {
+            wenn sei Öpis(wöbu) = gföhrlich { WÖRTERBUECH.als_ref() } {
+                Gäbig(wöbu.hol(&schlsl))
+            } suscht {
+                gopferdämmi!("Reto, mir bruuched's WÖRTERBUECH")
             }
         }
     }
 
-    öffentlich(kiste) funktion vielleicht(i: u32) -> Möglichkeit<Ergebnis<u32, Zeichenkette>> {
+    öffentlich(harasse) funktion vilicht(i: u32) -> Mängisch<Resultat<u32, Zeichäkette>> {
         wenn i % 2 == 1 {
             wenn i == 42 {
-                Etwas(Fehler(Zeichenkette::von("Scheiße")))
-            } anderenfalls {
-                Etwas(Gut(33))
+                Öpis(Exgüsi(Zeichäkette::von("Bünzli")))
+            } suscht {
+                Öpis(Gäbig(33))
             }
-        } anderenfalls {
-            Nichts
+        } suscht {
+            Nüüt
         }
     }
 
-    asynchron funktion beispiel() {
+    spööter funktion beispiel() {
     }
 
-    asynchron funktion beispiel2() {
-        beispiel().abwarten;
+    spööter funktion beispiel2() {
+        beispiel().abwarte;
     }
 
-    funktion einstieg() {
-        lass änd x = 31;
+    funktion eistieg() {
+        sei änd x = 31;
 
         entspreche x {
             42 => {
-                ausgabe!("Wienerschnitzel")
+                aazeig!("Raclette")
             }
-            _ => ausgabe!("Na geht doch")
+            _ => aazeig!("Fondue")
         }
 
         für i in 0..10 {
-            lass val = schleife {
+            sei wärt = schleifi {
                 abbruch i;
             };
 
-            während keins x < val {
+            weret x < wärt {
                 x += 1;
             }
 
-            x = wenn lass Etwas(ergebnis) = vielleicht(i) {
-                ergebnis.entpacken()
-            } anderenfalls {
+            x = wenn sei Öpis(resultat) = vilicht(i) {
+                resultat.uuspacke()
+            } suscht {
                 12
             };
         }
 
-        benutze std::vgl::Ordnung;
-        let _mod7 = vec![0; 100].wieder()
-            .nehme(50)
+        benutze std::vgl::Ordnig;
+        let _mod7 = vec![0; 100].numal()
+            .nimm(50)
             .zuordnen(|nummer| nummer %  7)
-            .sammeln::<Vec<i32>>()
-            .zu_wieder()
-            .falte(0, |a, nummer| match nummer.vgl(&a) {
-                Ordnung::Mehr => a - nummer,
-                Ordnung::Weniger => a + nummer,
-                Ordnung::Gleich => a,
+            .sammle::<Vec<i32>>()
+            .inne_numal()
+            .falte(0, |a, nummer| entspreche nummer.vgl(&a) {
+                Ordnig::Höcher => a - nummer,
+                Ordnig::Chliiner => a + nummer,
+                Ordnig::Gliich => a,
             });
     }
 }
-

@@ -1,51 +1,49 @@
-# rost
+# rösti
 
-<p align="center"><img src="logo.jpg" alt="Rust German Logo"></p>
+<p align="center"><img src="ferris_roesti.png" alt="Roesti mascot"></p>
 
-Aren't you _müde_ from writing Rust programs in English? Do you like saying
-"scheiße" a lot? Would you like to try something different, in an exotic and
-funny-sounding language? Would you want to bring some German touch to your
+Aren't you _huere müed_ from writing Rust programs in English? Do you like saying
+*"gopferdämmi!"* a lot? Would you like to try something different, in an exotic and
+funny-sounding language? Would you want to bring some Swiss touch to your
 programs?
 
-**rost** (German for _Rust_) is here to save your day, as it allows you to
-write Rust programs in German, using German keywords, German function names,
-German idioms.
+**Rösti** is here to save your day, as it allows you to
+write Rust programs in Swiss German, using Swiss German keywords, Swiss German
+function names, Swiss German idioms.
 
-You don't feel at ease using only German words? Don't worry!
-German Rust is fully compatible with English-Rust, so you can mix both at your
+You don't feel at ease using only Swiss German words? Don't worry!
+Swiss German Rust is fully compatible with English-Rust, so you can mix both at your
 convenience.
 
-Here's an example of what can be achieved with Rost:
-
-## struct and impl (aka Konvention und Umsetzung)
+Here's an example of what can be achieved with Rösti:
 
 ```rust
-rost::rost! {
-    benutze std::sammlungen::Wörterbuch als Wöbu;
+roesti::roesti! {
+    benutze std::sammlige::Wörterbuech als Wöbu;
 
-    eigenschaft SchlüsselWert {
-        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette);
-        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette>;
+    eigedschaft SchlüsselWärt {
+        funktion schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette);
+        funktion läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette>;
     }
 
-    statisch änd WÖRTERBUCH: Möglichkeit<Wöbu<Zeichenkette, Zeichenkette>> = Nichts;
+    statisch änd WÖRTERBUECH: Mängisch<Wöbu<Zeichäkette, Zeichäkette>> = Nüüt;
 
     struktur Konkret;
 
-    umstz SchlüsselWert für Konkret {
+    impl SchlüsselWärt für Konkret {
 
-        funktion schreibe(&selbst, schlsl: Zeichenkette, wert: Zeichenkette) {
-            lass wöbu = gefährlich {
-                WÖRTERBUCH.hole_oder_füge_ein_mit(Standard::standard)
+        funktion schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette) {
+            sei wöbu = gföhrlich {
+                WÖRTERBUECH.hol_oder_füeg_ii_mit(Standard::standard)
             };
-            wöbu.einfügen(schlsl, wert);
+            wöbu.iifüge(schlsl, wärt);
         }
 
-        funktion lese(&selbst, schlsl: Zeichenkette) -> Ergebnis<Möglichkeit<&Zeichenkette>, Zeichenkette> {
-            wenn lass Etwas(wöbu) = gefährlich { WÖRTERBUCH.als_ref() } {
-                Gut(wöbu.hole(&schlsl))
-            } anderenfalls {
-                Fehler("Holt das Wörterbuch".hinein())
+        funktion läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette> {
+            wenn sei Öpis(wöbu) = gföhrlich { WÖRTERBUECH.als_ref() } {
+                Gäbig(wöbu.hol(&schlsl))
+            } suscht {
+                gopferdämmi!("Reto, mir bruuched's WÖRTERBUECH")
             }
         }
     }
@@ -55,23 +53,19 @@ rost::rost! {
 ## Other examples
 
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
-syntax. Gut so!
+syntax. *So isch lässig!*
 
-## but why would you do das?
+## Credits
 
-* the [French](https://github.com/bnjbvr/rouille) and [Dutch](https://github.com/jeroenhd/roest) can do it, so we can as well!
+This joke started life in [French](https://github.com/bnjbvr/rouille). *Rösti* was based on the [German](https://github.com/michidk/rost) version thereof.
 
 ## Mitwirken
 
-First of all, _vielen Dank_ for considering participating to this joke, the
-German government will thank you later! Feel free to throw in a few identifiers
-here and there, and open a pull-request against the `hauptzweig` (German for
-`main branch`). The initial translation was made by [Shemnei](https://github.com/Shemnei/) and [michidk](https://github.com/michidk/).
+Not a native speaker of Swiss German, so help is welcome! *Merci vielmal!*
+Feel free to throw in a few identifiers here and there, and open a
+pull-request against the `hauptzweig` (German for `main branch`).
 
-## Die Lizenzbestimmungen
+## D'Lizenzbestimmige
 
-[WTFPL](http://www.wtfpl.net/). The images do not fall under this license, see below.
+[WTFPL](http://www.wtfpl.net/).
 
-Image attributions:
-* "Brezel und Filzhut zum Oktoberfest" by Tim Reckmann | a59.de is licensed under CC BY 2.0
-* "Lederhose" is licensed under CC BY-NC-SA 4.0
