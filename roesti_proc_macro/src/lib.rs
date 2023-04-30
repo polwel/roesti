@@ -47,6 +47,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "numal" => "iter",
         "inne_numal" => "into_iter",
         "zuordnen" => "map",
+        "und_denn" => "and_then",
         "falte" => "fold",
         "leere" => "drain",
         "sammle" => "collect",

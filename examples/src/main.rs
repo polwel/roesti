@@ -29,7 +29,7 @@ roesti::roesti! {
     }
 
     öffentlich(harasse) fn vilicht(i: u32) -> Mängisch<Resultat<u32, Zeichäkette>> {
-        wenn i % 2 == 1 {
+        wenn i % 2 == 0 {
             wenn i == 42 {
                 Öpis(Exgüsi(Zeichäkette::von("Bünzli")))
             } suscht {
@@ -59,15 +59,15 @@ roesti::roesti! {
 
         für i in 0..10 {
             sei wärt = schleifi {
-                abbruch i;
+                abbruch Chäschtli::neu(i);
             };
 
-            weret cumulus_pünkt < wärt {
+            weret cumulus_pünkt < *wärt {
                 cumulus_pünkt += 1;
             }
 
             cumulus_pünkt = wenn sei Öpis(resultat) = vilicht(i) {
-                resultat.uuspacke()
+                resultat.und_denn(zügele |x| Gäbig(2*x)).uuspacke()
             } suscht {
                 12
             };
