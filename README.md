@@ -2,8 +2,8 @@
 
 <p align="center"><img src="ferris_roesti.png" alt="Roesti mascot"></p>
 
-Aren't you _huere müed_ from writing Rust programs in English? Do you like saying
-*"gopferdämmi!"* a lot? Would you like to try something different, in an exotic and
+Do you have *kei Luscht meh* to write Rust programs in English? Do you like saying
+*"gopferdammi!"* a lot? Would you like to try something different, in an exotic and
 funny-sounding language? Would you want to bring some Swiss touch to your
 programs?
 
@@ -43,7 +43,7 @@ roesti::roesti! {
             wenn sei Öpis(wöbu) = gföhrlich { WÖRTERBUECH.als_ref() } {
                 Gäbig(wöbu.hol(&schlsl))
             } suscht {
-                gopferdämmi!("Reto, mir bruuched's WÖRTERBUECH")
+                gopferdammi!("Reto, mir bruuched's WÖRTERBUECH")
             }
         }
     }

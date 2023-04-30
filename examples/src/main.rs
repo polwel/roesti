@@ -2,8 +2,8 @@ roesti::roesti! {
     benutze std::sammlige::Wörterbuech als Wöbu;
 
     eigedschaft SchlüsselWärt {
-        funktion schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette);
-        funktion läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette>;
+        fn schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette);
+        fn läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette>;
     }
 
     statisch änd WÖRTERBUECH: Mängisch<Wöbu<Zeichäkette, Zeichäkette>> = Nüüt;
@@ -12,23 +12,23 @@ roesti::roesti! {
 
     impl SchlüsselWärt für Konkret {
 
-        funktion schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette) {
+        fn schriib(&selbst, schlsl: Zeichäkette, wärt: Zeichäkette) {
             sei wöbu = gföhrlich {
                 WÖRTERBUECH.hol_oder_füeg_ii_mit(Standard::standard)
             };
             wöbu.iifüge(schlsl, wärt);
         }
 
-        funktion läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette> {
+        fn läs(&selbst, schlsl: Zeichäkette) -> Resultat<Mängisch<&Zeichäkette>, Zeichäkette> {
             wenn sei Öpis(wöbu) = gföhrlich { WÖRTERBUECH.als_ref() } {
                 Gäbig(wöbu.hol(&schlsl))
             } suscht {
-                gopferdämmi!("Reto, mir bruuched's WÖRTERBUECH")
+                gopferdammi!("Reto, mir bruuched's WÖRTERBUECH")
             }
         }
     }
 
-    öffentlich(harasse) funktion vilicht(i: u32) -> Mängisch<Resultat<u32, Zeichäkette>> {
+    öffentlich(harasse) fn vilicht(i: u32) -> Mängisch<Resultat<u32, Zeichäkette>> {
         wenn i % 2 == 1 {
             wenn i == 42 {
                 Öpis(Exgüsi(Zeichäkette::von("Bünzli")))
@@ -40,17 +40,17 @@ roesti::roesti! {
         }
     }
 
-    spööter funktion beispiel() {
+    spööter fn beispiel() {
     }
 
-    spööter funktion beispiel2() {
+    spööter fn beispiel2() {
         beispiel().abwarte;
     }
 
-    funktion eistieg() {
-        sei änd x = 31;
+    fn eistieg() {
+        sei änd cumulus_pünkt = 31;
 
-        entspreche x {
+        entspreche cumulus_pünkt {
             42 => {
                 aazeig!("Raclette")
             }
@@ -62,11 +62,11 @@ roesti::roesti! {
                 abbruch i;
             };
 
-            weret x < wärt {
-                x += 1;
+            weret cumulus_pünkt < wärt {
+                cumulus_pünkt += 1;
             }
 
-            x = wenn sei Öpis(resultat) = vilicht(i) {
+            cumulus_pünkt = wenn sei Öpis(resultat) = vilicht(i) {
                 resultat.uuspacke()
             } suscht {
                 12

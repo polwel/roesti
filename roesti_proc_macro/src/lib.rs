@@ -40,7 +40,6 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "ea" => "io",
         "extern" => "extern",
         "falsch" => "false",
-        "funktion" => "fn",
         "huereguet" => "super",
         "iifüge" => "insert",
 
@@ -64,7 +63,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
 
         "hol" => "get",
         "erlaube" => "allow",
-        "panik" | "gopferdämmi" | "hueresiech" => "panic",
+        "panik" | "gopferdammi" | "ups" => "panic",
         "modul" => "mod",
         "änd" => "mut",
         "neu" => "new",
