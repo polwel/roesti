@@ -62,7 +62,7 @@ roesti::roesti! {
                 abbruch Chäschtli::neu(i);
             };
 
-            weret cumulus_pünkt < *wärt {
+            solang cumulus_pünkt < *wärt {
                 cumulus_pünkt += 1;
             }
 

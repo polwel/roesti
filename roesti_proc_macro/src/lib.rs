@@ -40,6 +40,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "ea" => "io",
         "extern" => "extern",
         "falsch" => "false",
+        "wahr" => "true",
         "huereguet" => "super",
         "iifüge" => "insert",
 
@@ -83,10 +84,9 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "statisch" => "static",
         "struktur" => "struct",
         "mol" => "expect",
-        "weret" => "while",
+        "solang" => "while",
         "benutze" => "use",
         "inne" => "into",
-        "wahr" => "true",
         "uufzählig" => "enum",
 
         _ => &ident_str,
